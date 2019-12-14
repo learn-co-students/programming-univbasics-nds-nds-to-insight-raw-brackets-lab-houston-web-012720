@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
+
 def directors_totals(nds)
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
@@ -21,6 +22,7 @@ def directors_totals(nds)
   
   index = 0 
   while index < nds.count do 
+
     
     movies_array = nds[index][:movies]
     names = nds[index][:name]
@@ -32,8 +34,9 @@ def directors_totals(nds)
       
       worldwide_gross += movies_array[element_index][:worldwide_gross]
       element_index += 1
-      
     end
+
+  
   
     result[names]= worldwide_gross
     index += 1 
