@@ -21,13 +21,18 @@ def directors_totals(nds)
   
   index = 0 
   while index < nds.count do 
+    
     movies_array = nds[index][:movies]
     names = nds[index][:name]
+    
     element_index = 0 
     worldwide_gross = 0
+    
     while element_index < movies_array.count do 
+      
       worldwide_gross += movies_array[element_index][:worldwide_gross]
       element_index += 1
+      
     end
   
     result[names]= worldwide_gross
